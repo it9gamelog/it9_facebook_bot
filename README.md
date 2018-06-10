@@ -2,7 +2,10 @@
 
 This bot monitor a post of a Facebook Page, and send private message to user automatically upon seeing matching comment.
 
-You should have an Facebook App, and setup the callback url to `https://.../login/parse`. Web service configuration is out of scope.
+You should have an Facebook App, and setup the callback url to `https://.../login/parse`. 
+
+Web service configuration is out of scope.
+
 ```
 1. `npm install`
 2. `npm install supervisor -g`
@@ -12,6 +15,7 @@ You should have an Facebook App, and setup the callback url to `https://.../logi
 5. Create `profile.js` according to the screen instruction
 6. `supervisor -- app.js profile.js`
 7. Enjoy
+```
 
 # Unlicense
 
