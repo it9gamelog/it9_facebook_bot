@@ -1,0 +1,26 @@
+doctype html
+html(lang="en")
+  body
+    h1 Login Result
+    p Put the following in a #[code profile.js] file, and restart the server like #[code supervisor -- app.js profile.js]
+    pre.
+      module.exports = {
+        PAGE_TOKEN: "#{config.PAGE_TOKEN}",
+        PAGE_ID: "#{config.PAGE_ID}",
+        POST_ID: "#{config.POST_ID}",
+        comment: "Text to reply the comment",
+        reply: "Text to PM the user",
+        data: [
+          {
+            match: /regex1/
+          },
+          {
+            match: /regex2/
+            comment: "Specific comment and override the top"
+          },
+          {
+            match: /regex3/
+            reply: "Specific reply and override the top"
+          }
+        }
+      }

@@ -1,0 +1,6 @@
+
+var FB = require('fb');
+
+module.exports = function() {
+  return FB.extend({appId: 'XXX', appSecret: 'XXX'});
+}();

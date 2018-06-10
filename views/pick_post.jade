@@ -1,0 +1,11 @@
+doctype html
+html(lang="en")
+  body
+    h1 Select Page to Proceed
+    form(method='POST' action='/login/result')
+      input(type='hidden' name='page_token' value=page_token)
+      select(name="post_id")
+        -for (var i = 0; i < data.length; i++)
+          - if (data[i].message)
+            option(value=data[i].id) #{data[i].created_time} #{data[i].message.substr(0, 100)}
+      button(type='submit') Select

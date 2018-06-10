@@ -1,0 +1,9 @@
+doctype html
+html(lang="en")
+  body
+    h1 Select Page to Proceed
+    form(method='POST' action='/login/pick_post')
+      select(name="page_token")
+        -for (var i = 0; i < data.length; i++)
+          option(value=data[i].access_token) #{data[i].name}
+      button(type='submit') Select
